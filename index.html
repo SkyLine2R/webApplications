@@ -4,9 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no">
   <link rel="shortcut icon" href="images/fav.png" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" media="all" href="css/animate.css">
+  <script src="js/wow.min.js"></script>
+  <script>new WOW().init();</script>
   <title>Web Applications</title>
 </head>
 
@@ -58,9 +61,9 @@
 
   <section class="section section-one">
     <div>
-      <h1 class="main-title">web applications</h1>
+      <h1 class="main-title wow">web applications</h1>
       <p class="main-text">Повседневная практика.</p>
-      <button class="button button-main">Спец предложение
+      <button class="button button-main wow fadeIn">Спец предложение
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_9_26)">
             <path
@@ -78,9 +81,9 @@
   </section>
 
   <section class="section about-company">
-    <div class="about-company-img">
+    <div class="about-company-img wow bounceInLeft">
     </div>
-    <div class="about-company-container">
+    <div class="about-company-container wow bounceInRight">
       <h2>О компании</h2>
       <p class="about-company-text">Мы диджитал агентство занимаемся полным циклом продвижения компаний в
         интернете.
@@ -95,11 +98,11 @@
     </div>
   </section>
 
-  <section class="section portfolio">
+  <section class="section portfolio wow bounceInUp">
     <h2 class="portfolio-h2">Портфолио</h2>
     <div>
       <img src="images/f_9936163de18b3599 1.png" alt="devices">
-      <button class="button button-main">Перейти на сайт
+      <button class="button button-main wow fadeInDownBig">Перейти на сайт
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_9_26)">
             <path
@@ -116,7 +119,7 @@
     </div>
   </section>
 
-  <section class="section we-offer">
+  <section class="section we-offer wow flipInY">
     <h2>Что мы предлагаем</h2>
     <div class="grid-offer">
       <div class="row-table">
@@ -166,7 +169,7 @@
         <p>Продвижение в социальных сетях</p>
       </div>
       <div class="row-table">
-        <buttton class="button white">
+        <button class="button white wow lightSpeedIn">
           <div>Подробнее</div>
           <div><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -174,7 +177,7 @@
                 fill="white" />
             </svg>
           </div>
-        </buttton>
+        </button>
       </div>
       <div class="row-table">
         <img src="/images/12 award 1.svg" alt="award">
@@ -185,23 +188,23 @@
   <section class="section advantage">
     <div class="advantage-content">
       <h2>Наши преимущества</h2>
-      <div>
+      <div class="wow lightSpeedIn">
         <img src="/images/13 award1.svg" alt="award">
         <p>Сделаем адаптивный дизайн, под любой вид устройств</p>
       </div>
 
-      <div>
+      <div class="wow lightSpeedIn">
         <img src="/images/15 award1.svg" alt="award">
         <p>Установим на сайт счетчики аналитики и настроим возможность отслеживать результаты прямо с вашего мобильного
           телефона</p>
       </div>
-      <div>
+      <div class="wow lightSpeedIn">
         <img src="/images/14 award1.svg" alt="award">
         <p>Настроим все возможные способы обратной связи. Заявки на почту, подключим онлайн консультанта, настроим
           телефонный звон
           с сайта, подключим Whatsapp к сайту</p>
       </div>
-      <div>
+      <div class="wow lightSpeedIn">
         <img src="/images/16 award1.svg" alt="award">
         <p>Проведем анализ вашей сферы и конкурентов, предложим лучшие инструменты для продвижения в интернете</p>
       </div>
@@ -211,7 +214,7 @@
   <section class="section request-offer">
     <div class="request">
       <h2>Заявка </h2>
-      <form class="request-form" action="" method="get">
+      <form class="request-form wow flipInY" action="" method="get">
         <label for="name">Ваше имя</label>
         <input type="text" name="name" id="name">
         <label for="e-mail">Ваш Email</label>
@@ -231,7 +234,7 @@
     </div>
     <div class="special-offer">
       <h2 class="white">Спецпредложения</h2>
-      <div class="offers">
+      <div class="offers wow flipInY">
         <div class="card">
           <svg width="194" height="284" viewBox="0 0 194 284" fill="none" xmlns="http://www.w3.org/2000/svg">
 
@@ -315,8 +318,8 @@
 
       </div>
   </section>
-  <footer class="footer">
-    <div class="footer-block">
+  <footer class="footer wow slideInRight">
+    <div class="footer-block wow slideInLeft">
       <div class="about">
         <div class="about-mission">
           <h3 class="footer-h3">Пункт</h3>
@@ -352,9 +355,9 @@
         </address>
       </div>
       <div class="messengers">
-        <div class="logo">digital flow</div>
+        <div class="logo wow slideInDown">digital flow</div>
         <div>
-          <ul>
+          <ul class="wow slideInDown">
             <li><a href="#"><img src="/images/mess01.svg" alt="telegram"></a></li>
             <li><a href="#"><img src="/images/mess02.svg" alt="telegram"></a></li>
             <li><a href="#"><img src="/images/mess03.svg" alt="telegram"></a></li>

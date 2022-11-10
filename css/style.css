@@ -5,6 +5,10 @@
   margin: 0;
 }
 
+html {
+  margin: auto;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
 }
@@ -33,13 +37,13 @@ body {
 }
 
 .section {
-  max-width: 1920px;
+  max-width: auto;
 }
 
 .section-one {
-  margin: 0 -7px;
   box-sizing: border-box;
   background: #074d88 url(/images/background-01.png);
+  background-position: center;
   height: 1030px;
 }
 
@@ -136,6 +140,7 @@ h2 {
   background: url("/images/about-company.png");
   background-repeat: no-repeat;
   transition: translate 0.5s cubic-bezier();
+  background-attachment: fixed;
 }
 
 .portfolio {
@@ -184,6 +189,10 @@ h2 {
   border-bottom: 1px solid #595959;
   width: 100%;
   height: 100%;
+}
+
+.row-table:where(:hover, :focus-visible) {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .row-table:nth-child(5n) {
@@ -241,6 +250,9 @@ h2 {
   width: auto;
   background: url("/images/background-13e3b.png");
   background-size: cover;
+  background-position: top;
+
+  background-attachment: fixed;
   background-repeat: no-repeat;
   padding-top: 336px;
 }
@@ -334,10 +346,10 @@ h2 {
 }
 
 input:-webkit-autofill,
-input:-webkit-autofill:hover,
+input:-webkit-autofill:where(:hover, :focus-visible),
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:where(:hover, :focus-visible),
 textarea:-webkit-autofill:focus {
   -webkit-text-fill-color: white;
   transition: background-color 5000s ease-in-out 0s;
@@ -354,6 +366,7 @@ textarea:-webkit-autofill:focus {
   height: 284px;
   width: 194px;
   position: relative;
+  transition: transform 0.5s ease-in-out;
 }
 
 .offers {
@@ -364,7 +377,7 @@ textarea:-webkit-autofill:focus {
   justify-content: space-between;
 }
 
-.offers svg:hover {
+.card:hover svg {
   background: linear-gradient(180deg, #61b3c9 0%, #074d88 100%);
 }
 
@@ -497,9 +510,21 @@ button {
   transition: all 0.3s ease-in-out;
 }
 
-button:hover {
+@keyframes backgroundFilling {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+button:hover,
+button:focus-visible {
   background: linear-gradient(90deg, #074d88 0%, #61b3c9 100%);
   transform: scale(1.03);
   color: white;
   cursor: pointer;
+  font-size: 90%;
+  animation: backgroundFilling 0.3s ease-in-out;
 }
